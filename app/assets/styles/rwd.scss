@@ -6,38 +6,10 @@
   }
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.container {
-    @include clearfix;
-}
-
 .box {
-    height: 300px;
-}
-
-.col-quarter {
-    float: left;
-    width: 25%;
-}
-
-.col-three-quarter {
-    float: left;
-    width: 75%;
-}
-
-.col-onethird {
-  float: left;
-  width: 33.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.bg-gray {
-  background-color: gray;
-}
-.bg-orange {
-  background-color: orange;
+  width: 200px;
+  height: 200px;
+  padding: 100px;
+  margin: 100px;
+  background-color: pink;
 }
