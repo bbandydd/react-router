@@ -10,34 +10,135 @@
     box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
+  min-height: 44px;
+  width: 100%;
+}
+
+.row {
+  @include clearfix;
+  width: 100%;
+  padding: 44px 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+  min-height: 44px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #777;
+  width: 100%;
+}
+
 .container {
-    @include clearfix;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
-.box {
-    height: 300px;
+.brand {
+  display: inline-block;
+  padding: 10px 0;
+  line-height:  24px;
+  color: #777;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .3s;
 }
 
-.col-quarter {
-    float: left;
-    width: 25%;
+.brand:hover, .brand:focus {
+  color: skyblue;
 }
 
-.col-three-quarter {
-    float: left;
-    width: 75%;
+.navbar-menu {
+  float: right;
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      padding: 10px 5px;
+      line-height: 24px;
+      color: #777;
+      text-decoration: none;
+      transition: color .3s;
+
+      &:hover, &:focus {
+        color: skyblue;
+      }
+    }
+  }
+}
+
+.button-toggle {
+  float: right;
+  display: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  line-height: 24px;
+  color: #777;
+  text-decoration: none;
+  transition: color .3s;
+  border: 1px solid #ccc;
 }
 
 .col-onethird {
   float: left;
-  width: 33.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 33.333%;
 }
 
-.bg-gray {
-  background-color: gray;
+.box {
+  min-height: 200px;
+  margin: 15px;
+  border: 1px solid #777;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 10px;
+  }
 }
-.bg-orange {
-  background-color: orange;
+
+@media screen and (max-width: 1000px) {
+  .col-onethird {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-menu {
+    float: none;
+    display: none;
+
+    li {
+      display: block;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .col-onethird {
+    width: 100%;
+  } 
+
+  .button-toggle {
+    display: inline-block;
+  }
 }
