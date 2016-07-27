@@ -1,22 +1,12 @@
 import React from 'react';
-import '../../assets/styles/rwd';
 
-export default class Rwd extends React.Component{
-    constructor() {
-        super();
-        this.state = {toggle: false};
-        this.handleToggle = this.handleToggle.bind(this);
-    }
+export default class index extends React.Component{
+	constructor() {
+		super()
+	}
 
-    handleToggle() {
-      this.setState({toggle: !this.state.toggle});
-    }
-
-    render() {
-
-        var navClass = this.state.toggle ? 'navbar-menu active' : 'navbar-menu';
-
-        var content = [],
+	render() {
+		var content = [],
             imgList = [
               'https://images.unsplash.com/photo-1458724338480-79bc7a8352e4?crop=entropy&dpr=2&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1200',
               'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?crop=entropy&dpr=2&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1200',
@@ -39,36 +29,10 @@ export default class Rwd extends React.Component{
           )
         })
 
-        return (
-          <div>
-            <div className="navbar">
-                <div className="container">
-                  <a className="brand" href="#">
-                    RWD
-                  </a>
-                  <a className='button-toggle' onClick={this.handleToggle}>
-                    三
-                  </a>
-                  <ul className={navClass}>
-                    <li><a href="#">選單1</a></li>
-                    <li><a href="#">選單2</a></li>
-                    <li><a href="#">選單3</a></li>
-                    <li><a href="#">選單4</a></li>
-                    <li><a href="#">選單5</a></li>
-                  </ul>
-                </div>
-            </div>
-            <div className="row">
-              <div className="container">
-                {content}
-              </div>
-            </div>
-            <div className="footer">
-              <div className="container">
-                Copyright
-              </div>
-            </div>
-          </div>
+        return(
+        	<div>
+        		{content}
+        	</div>
         )
-    }
+	}
 }

@@ -6,17 +6,16 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import '../assets/styles/normalize';
 
 import App from './components/app';
-import autocomplete from './components/autocomplete';
-import Rwd from './components/rwd';
+import Index from './components/index';
+import Content from './components/content';
 
 injectTapEventPlugin();
 
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
-          <Route path="autocomplete" component={autocomplete} />
-        </Route>
-        <Route path="/rwd" component={Rwd}>
+        	<Route path="index" component={Index} />
+        	<Route path="content" component={Content} />
         </Route>
     </Router>
     , document.getElementById('container'));
